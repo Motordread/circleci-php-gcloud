@@ -16,7 +16,7 @@ RUN bash -c "source /home/circleci/google-cloud-sdk/path.bash.inc && gcloud --qu
 
 #install php modules
 RUN sudo apt-get update -y && sudo apt-get install -y libpng-dev libmcrypt-dev libxml2-dev libmagickwand-dev libmagickwand-6.q16-3 libmcrypt4 && \
-    sudo docker-php-ext-install gd bcmath pdo pdo_mysql soap exif zip intl
+    sudo docker-php-ext-install gd bcmath pdo pdo_mysql soap exif zip intl sockets
 
 RUN sudo pecl channel-update pecl.php.net
 
